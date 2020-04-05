@@ -94,3 +94,16 @@ end
 def over?(board)
   draw?(board) || won?(board)
 end
+
+def winner(board)
+  player_token = won?(board)
+  if !won?(board)
+    return nil
+  end
+
+  if board[player_token[0]] == "X"
+    return "X"
+  else
+    return "O"
+  end
+end
